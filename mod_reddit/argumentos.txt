@@ -1,0 +1,25 @@
+Buscar posts por filtro
+
+Newest (más nuevos): reddit.subreddit('test').new(limit=10)
+Top (más votados): reddit.subreddit('test').top('all', limit=10)
+Hot (más populares): reddit.subreddit('test').hot(limit=10)
+
+
+Buscar posts por query o flag text
+
+Buscar por query: reddit.subreddit('test').search(q='python', sort='new', limit=10)
+Buscar por flag text: reddit.subreddit('test').search(q='flair:python', limit=10)
+
+Los parámetros sort disponibles son:
+
+relevance: ordena los resultados por relevancia (predeterminado)
+new: ordena los resultados por fecha de publicación más reciente
+hot: ordena los resultados por popularidad (votos y comentarios)
+top: ordena los resultados por votos
+comments: ordena los resultados por número de comentarios
+
+Parámetros adicionales
+
+Limit: número de posts a devolver (por defecto es 25)
+Time filter: filtro de tiempo para la búsqueda (por ejemplo, time_filter='hour' para buscar posts de la última hora)
+Sort: ordenar los resultados por un criterio específico (por ejemplo, sort='new' para ordenar por fecha de publicación)
